@@ -1,4 +1,4 @@
-﻿namespace BlaisePascal.Player.Domain
+﻿namespace BlaisePascal.Esempi.Domain
 {
     public class Player
     {

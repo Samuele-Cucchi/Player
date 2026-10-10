@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using System;
+using BlaisePascal.Esempi.Domain;
 
 public class Program
 {
