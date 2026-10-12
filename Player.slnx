@@ -1,9 +1,7 @@
 <Solution>
   <Folder Name="/doc/" />
   <Folder Name="/src/">
-    <Project Path="src/BlaisePascal.Player.Console/BlaisePascal.Esempi.Console.csproj" Id="5d49e5a2-9241-4e44-8ecc-b28a61e80ae7">
-      <BuildDependency Project="src/BlaisePascal.Player.Domain/BlaisePascal.Player.Domain/BlaisePascal.Esempi.Domain.csproj" />
-    </Project>
+    <Project Path="src/BlaisePascal.Player.Console/BlaisePascal.Esempi.Console.csproj" Id="5d49e5a2-9241-4e44-8ecc-b28a61e80ae7" />
     <Project Path="src/BlaisePascal.Player.Domain/BlaisePascal.Player.Domain/BlaisePascal.Esempi.Domain.csproj" Id="f64efac6-5598-4a4d-a4ba-264da80300f6" />
   </Folder>
   <Folder Name="/test/">

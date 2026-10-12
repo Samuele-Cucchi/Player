@@ -5,52 +5,63 @@
     /// </summary>
     public class Enemy
     {
+        // Backing field
         private int _health;
 
-        public int Health { get { return _health; } }
+        public string Name { get; set; }
 
-        //proprietà
-        //public int Health
-        //{
-        //    get { return _health; }
-        //    set 
-        //    { 
-        //        if(value < 0) // caso limite 1
-        //        {
-        //            _health = 0;
-        //        }else if (value > 100) // caso limite 2
-        //        {
-        //            _health = 100;
-        //        }
-        //        else // caso normale
-        //        {
-        //            _health = value;
-        //        }
-        //
-        //    }        
-        //}        
-
-        //costruttore
-        public Enemy() { }
-
-        public void setHealth(int newHealth)
+        public int Health
         {
-            if (newHealth < 0) // caso limite 1
-                _health = 0;
-            else if (newHealth > 100) // caso limite 2
-                _health = 100;
-            else // caso normale
-                _health = newHealth;
+            get
+            {
+                return _health;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    _health = 0;
+                }
+                else if (value > 100)
+                {
+                    _health = 100;
+                }
+                else
+                {
+                    _health = value;
+                }
+            }
         }
 
-        public bool isAlive()
+        public int Damage { get; private set; }
+
+        public Enemy(string name, int health, int damage)
         {
-            return _health > 0;
+            Name = name;
+            Health = health;
+            Damage = damage;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public bool IsAlive()
+        {
+            return Health > 0;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="damage"></param>
         public void TakeDamage(int damage)
         {
-            setHealth(_health - damage);
+            if (damage > 0)
+            {
+                Health -= damage;
+            }
         }
+
     }
 }
